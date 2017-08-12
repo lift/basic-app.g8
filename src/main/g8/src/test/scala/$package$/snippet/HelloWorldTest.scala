@@ -1,4 +1,4 @@
-package code
+package $package$
 package snippet
 
 import java.util.Date

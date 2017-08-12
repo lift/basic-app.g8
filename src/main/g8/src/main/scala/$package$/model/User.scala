@@ -1,4 +1,4 @@
-package code
+package $package$
 package model
 
 import net.liftweb.mapper._
@@ -33,4 +33,3 @@ class User extends MegaProtoUser[User] {
     override def displayName = "Personal Essay"
   }
 }
-

@@ -1,4 +1,4 @@
-package code
+package $package$
 package lib
 
 import net.liftweb._
