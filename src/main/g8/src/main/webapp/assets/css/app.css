@@ -4,41 +4,41 @@
 }
 
 .sidebar ul {
-	margin:0;
-	padding:0;
-	border-bottom:1px solid #ccc;
+  margin:0;
+  padding:0;
+  border-bottom:1px solid #ccc;
 }
-	 
+
 
 .sidebar ul li {
-	margin:0;
-	padding:0;
-	list-style:none;
-	border:1px solid #ccc;
-	border-bottom:none;
+  margin:0;
+  padding:0;
+  list-style:none;
+  border:1px solid #ccc;
+  border-bottom:none;
 }
 
 .sidebar ul li a {
-	display:block;
-	padding:3px;
-	text-indent:30px;
-	text-decoration:none;
+  display:block;
+  padding:3px;
+  text-indent:30px;
+  text-decoration:none;
 }
 
 .sidebar ul li span {
-	display:block;
-	padding:3px;
-	text-indent:30px;
-	text-decoration:none;
+  display:block;
+  padding:3px;
+  text-indent:30px;
+  text-decoration:none;
 }
 
 .sidebar ul li a:hover {
-	background-color: #eee;
+  background-color: #eee;
 }
 
 .ralign {
-	text-align: right;
+  text-align: right;
 }
 .calign {
-	text-align: center;
+  text-align: center;
 }
