@@ -17,7 +17,7 @@ import org.specs2.execute.Result
 object HelloWorldTestSpecs extends Specification with AroundEach {
   val session = new LiftSession("", randomString(20), Empty)
   val stableTime: Date = (10 minutes).ago.toDate
-
+  DependencyFactory.time.default.set(stableTime)
 
   /**
    * For additional ways of writing tests,
@@ -36,6 +36,8 @@ object HelloWorldTestSpecs extends Specification with AroundEach {
       val hello = new HelloWorld
 
       val str = hello.howdy(<span>Welcome to your Lift app at <span id="time">Time goes here</span></span>).toString
+      println(stableTime.toString)
+      println(str)
 
       str.indexOf(stableTime.toString) must be >= 0
       str must startWith("<span>Welcome to")
