@@ -24,7 +24,7 @@ libraryDependencies ++= {
   Seq(
     "net.liftweb"       %% "lift-webkit"            % liftVersion,
     "net.liftweb"       %% "lift-mapper"            % liftVersion,
-    "net.liftmodules"   %% s"lift-jquery-module_$liftEdition" % "2.10",
+    "net.liftmodules"   %% s"lift-jquery-module_\$liftEdition" % "2.10",
     "ch.qos.logback"    % "logback-classic"         % "1.2.3",
     "org.specs2"        %% "specs2-core"            % "3.9.4"            % "test",
     "com.h2database"    % "h2"                      % "1.4.187",
