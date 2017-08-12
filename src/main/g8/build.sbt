@@ -2,7 +2,7 @@ name := "Lift 3.0 starter template"
 
 version := "0.1.0"
 
-organization := "net.liftweb"
+organization := "$organization$"
 
 scalaVersion := "2.12.3"
 
