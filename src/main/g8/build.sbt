@@ -4,7 +4,7 @@ version := "0.1.0"
 
 organization := "$organization$"
 
-scalaVersion := "2.12.3"
+scalaVersion := "$scala_version$"
 
 resolvers ++= Seq(
   "snapshots"     at "https://oss.sonatype.org/content/repositories/snapshots",
