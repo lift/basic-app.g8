@@ -33,11 +33,6 @@ class Boot {
       DB.defineConnectionManager(util.DefaultConnectionIdentifier, vendor)
     }
 
-    // Use Lift's Mapper ORM to populate the database
-    // you don't need to use Mapper to use Lift... use
-    // any ORM you want
-    Schemifier.schemify(true, Schemifier.infoF _, User)
-
     // where to search snippet
     LiftRules.addToPackages("$package$")
 
@@ -91,5 +86,10 @@ class Boot {
     }
     // Make a transaction span the whole HTTP request
     S.addAround(DB.buildLoanWrapper)
+
+    // Use Lift's Mapper ORM to populate the database
+    // you don't need to use Mapper to use Lift... use
+    // any ORM you want
+    Schemifier.schemify(true, Schemifier.infoF _, User)
   }
 }
