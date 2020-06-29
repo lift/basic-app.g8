@@ -79,9 +79,10 @@ class Boot {
     LiftRules.securityRules = () => {
       SecurityRules(content = Some(ContentSecurityPolicy(
         scriptSources = List(
-            ContentSourceRestriction.Self),
+            ContentSourceRestriction.Self,
+            ContentSourceRestriction.UnsafeInline),
         styleSources = List(
-            ContentSourceRestriction.Self)
+            ContentSourceRestriction.All)
             )))
     }
     // Make a transaction span the whole HTTP request
