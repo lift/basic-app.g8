@@ -79,9 +79,13 @@ class Boot {
     LiftRules.securityRules = () => {
       SecurityRules(content = Some(ContentSecurityPolicy(
         scriptSources = List(
-            ContentSourceRestriction.Self),
+            ContentSourceRestriction.Self,
+            ContentSourceRestriction.UnsafeInline),
+        // Allowing style sources from all locations, since Bootstrap is now loaded from CDN.
+        // If it would be served through local resources, "ContentSourceRestriction.Self"
+        // could be used for more secure CSP restriction.
         styleSources = List(
-            ContentSourceRestriction.Self)
+            ContentSourceRestriction.All)
             )))
     }
     // Make a transaction span the whole HTTP request
