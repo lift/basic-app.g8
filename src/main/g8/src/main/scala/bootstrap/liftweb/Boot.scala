@@ -81,6 +81,9 @@ class Boot {
         scriptSources = List(
             ContentSourceRestriction.Self,
             ContentSourceRestriction.UnsafeInline),
+        // Allowing style sources from all locations, since Bootstrap is now loaded from CDN.
+        // If it would be served through local resources, "ContentSourceRestriction.Self"
+        // could be used for more secure CSP restriction.
         styleSources = List(
             ContentSourceRestriction.All)
             )))
