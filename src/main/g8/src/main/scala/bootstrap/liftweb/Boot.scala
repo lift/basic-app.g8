@@ -6,13 +6,11 @@ import Helpers._
 
 import common._
 import http._
-import js.jquery.JQueryArtifacts
 import sitemap._
 import Loc._
 import mapper._
 
 import $package$.model._
-import net.liftmodules.JQueryModule
 
 
 /**
@@ -50,11 +48,6 @@ class Boot {
     // set the sitemap.  Note if you don't want access control for
     // each page, just comment this line out.
     LiftRules.setSiteMapFunc(() => sitemapMutators(sitemap))
-
-    //Init the jQuery module, see http://liftweb.net/jquery for more information.
-    //LiftRules.jsArtifacts = JQueryArtifacts
-    JQueryModule.InitParam.JQuery=JQueryModule.JQuery1113
-    JQueryModule.init()
 
     //Show the spinny image when an Ajax call starts
     LiftRules.ajaxStart =
