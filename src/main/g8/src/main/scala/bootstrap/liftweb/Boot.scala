@@ -72,6 +72,7 @@ class Boot {
     LiftRules.securityRules = () => {
       SecurityRules(content = Some(ContentSecurityPolicy(
         scriptSources = List(
+            ContentSourceRestriction.Host("https://code.jquery.com"),
             ContentSourceRestriction.Self,
             ContentSourceRestriction.UnsafeInline),
         // Allowing style sources from all locations, since Bootstrap is now loaded from CDN.
