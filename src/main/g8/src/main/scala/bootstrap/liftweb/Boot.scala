@@ -6,13 +6,11 @@ import Helpers._
 
 import common._
 import http._
-import js.jquery.JQueryArtifacts
 import sitemap._
 import Loc._
 import mapper._
 
 import $package$.model._
-import net.liftmodules.JQueryModule
 
 
 /**
@@ -51,11 +49,6 @@ class Boot {
     // each page, just comment this line out.
     LiftRules.setSiteMapFunc(() => sitemapMutators(sitemap))
 
-    //Init the jQuery module, see http://liftweb.net/jquery for more information.
-    //LiftRules.jsArtifacts = JQueryArtifacts
-    JQueryModule.InitParam.JQuery=JQueryModule.JQuery1113
-    JQueryModule.init()
-
     //Show the spinny image when an Ajax call starts
     LiftRules.ajaxStart =
       Full(() => LiftRules.jsArtifacts.show("ajax-loader").cmd)
@@ -79,6 +72,7 @@ class Boot {
     LiftRules.securityRules = () => {
       SecurityRules(content = Some(ContentSecurityPolicy(
         scriptSources = List(
+            ContentSourceRestriction.Host("https://code.jquery.com"),
             ContentSourceRestriction.Self,
             ContentSourceRestriction.UnsafeInline),
         // Allowing style sources from all locations, since Bootstrap is now loaded from CDN.
